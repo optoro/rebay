@@ -6,10 +6,6 @@ module Rebay
         @finder = Finding.new
         @finder.stub!(:get_json_response).and_return(Rebay::Response.new({"Ack" => 'Success'}))
     end
-      
-    it "should specify base url" do
-      Finding::BASE_URL.should_not be_nil
-    end
     
     it "should specify version" do
       Finding::VERSION.should_not be_nil
